@@ -1,0 +1,113 @@
+.device-detail {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  padding: 0 15px;
+
+  .detail-content {
+    float: left;
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e8e8e8;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .title {
+      padding: 15px 0;
+      font-size: 16px;
+      //color: #111;
+      color: #8BC34A;
+    }
+
+    .left {
+      padding-bottom: 15px;
+    }
+
+    .left .description {
+      font-size: 14px;
+      color: #757575;
+    }
+
+    .right {
+      .panel {
+        .panel-body {
+          .item {
+            @item-height: 50px;
+            height: @item-height;
+            border-bottom: 1px solid #e8e8e8;
+            &:last-child {
+              border-bottom: none;
+            }
+            .item-name {
+              float: left;
+              width: 30%;
+              max-width: 120px;
+              text-align: center;
+              line-height: @item-height;
+              font-size: 14px;
+              color: #757575;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              &.highlight {
+                font-size: 16px;
+                color: #111;
+              }
+            }
+            .item-detail {
+              float: left;
+              width: 60%;
+              padding-left: 2%;
+              padding-right: 2%;
+              text-align: center;
+              line-height: @item-height;
+              font-size: 15px;
+              color: #757575;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              &.highlight {
+                color: #111;
+              }
+              button {
+                appearance: none;
+                width: 70px;
+                border: none;
+                border-radius: 16px;
+                box-shadow: 0 1px 4px rgba(0,0,0,0.26);
+                color: #a00;
+                background-color: #fff;
+              }
+            }
+            .item-next {
+              float: right;
+              width: 5%;
+              text-align: left;
+              line-height: @item-height;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .device-detail {
+    padding: 0 30px;
+
+    .detail-content .left {
+      float: left;
+      width: 30%;
+    }
+
+    .detail-content .right {
+      float: left;
+      width: 70%;
+      padding-left: 20px;
+    }
+  }
+}

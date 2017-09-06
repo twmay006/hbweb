@@ -1,0 +1,140 @@
+/*device list*/
+.device-list {
+  height: 100%;
+  .panel-wrapper {
+    margin: 0 10px;
+    border-bottom: 1px solid #e8e8e8;
+
+    .panel {
+      box-shadow: none;
+
+      .panel-header {
+        @panel-header-height: 56px;
+        height: @panel-header-height;
+        margin: 8px 10px;
+        .cover {
+          float: left;
+          width: @panel-header-height;
+          height: @panel-header-height;
+          img {
+            width: @panel-header-height;
+            height: @panel-header-height;
+          }
+        }
+
+        .info {
+          float: left;
+          margin-left: 20px;
+          max-width: 120px;
+          overflow-x: hidden;
+          .title {
+            margin-top: 8px;
+            white-space: nowrap;
+            font-size: 16px;
+            color: #111;
+          }
+          .subtitle {
+            margin-top: 1px;
+            font-size: 12px;
+            color: #777;
+          }
+        }
+
+        .extra {
+          float: left;
+          line-height: @panel-header-height;
+          margin-left: 8px;
+          font-size: 12px;
+          color: #777;
+        }
+
+        .options {
+          float: right;
+          span {
+            line-height: @panel-header-height;
+            font-size: 20px;
+            width: auto;
+            padding-right: 16px;
+            overflow: hidden;
+            &.mobile-visible {
+              display: inline;
+            }
+            &.mobile-invisible {
+              display: none;
+            }
+          }
+          @media screen and (min-width: 768px) {
+            span {
+              &.mobile-visible {
+                display: none;
+              }
+              &.mobile-invisible {
+                display: inline;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .device-list {
+    .panel-wrapper {
+      margin: 0 25px;
+    }
+  }
+}
+
+.device-item {
+  @device-item-height: 50px;
+  height: @device-item-height;
+  border-top: 1px solid #e8e8e8;
+  .header {
+    float: left;
+    margin-left: 16px;
+    line-height: @device-item-height;
+    color: #e8e8e8;
+    &.active {
+      color: #8BC34A;
+    }
+  }
+  .title {
+    float:left;
+    margin-left: 16px;
+    line-height: @device-item-height;
+    font-size: 15px;
+    color: #111;
+    white-space: nowrap;
+    overflow-x: hidden;
+  }
+
+  .subtitle {
+    float: left;
+    line-height: @device-item-height;
+    width: @device-item-height;
+    font-size: 10px;
+    color: #888;
+    white-space: nowrap;
+    overflow-x: hidden;
+  }
+
+  .more {
+    float: right;
+    margin-right: 20px;
+    line-height: @device-item-height;
+    font-size: 14px;
+    color: #8BC34A;
+    white-space: nowrap;
+  }
+
+}
+
+.dropdown-menu {
+  min-width: 100px;
+}
+
+.dropdown-menu > li > a {
+  padding: 2px 8px;
+}

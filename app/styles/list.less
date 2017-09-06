@@ -1,0 +1,26 @@
+/* list */
+.list {
+  /*margin: 10px;*/
+  padding: 10px;
+
+  .list-item {
+    display: block;
+    border-radius: 4px;
+    line-height: 40px;
+
+    &:focus {
+      border: none;
+    }
+
+    &.active {
+      //box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.26);
+      background-color: #8BC34A;
+      color: #fff;
+    }
+  }
+}
+
+.list .list-item + .list-item {
+  margin: 5px 0;
+}
+
